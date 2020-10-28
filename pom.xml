@@ -10,7 +10,7 @@
   <description>hello</description>
   <distributionManagement>
         <repository>
-            <id>nexus-releases</id>
+            <id>releases</id>
             <name>WSO2 Release Distribution Repository</name>
             <url>http://localhost:8081/nexus/content/repositories/releases/</url>
         </repository>
