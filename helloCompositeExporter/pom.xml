@@ -34,16 +34,12 @@
         <updatePolicy>daily</updatePolicy>
         <checksumPolicy>ignore</checksumPolicy>
       </releases>
-      <id>wso2-nexus</id>
-      <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
+      <id>nexus-releases</id>
+      <url>http://localhost:8081/nexus/content/repositories/releases/</url>
     </repository>
     <repository>
       <id>wso2-maven2-repository-1</id>
       <url>http://dist.wso2.org/maven2</url>
-    </repository>
-    <repository>
-      <id>wso2-nexus-repository-1</id>
-      <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
     </repository>
   </repositories>
   <pluginRepositories>
@@ -53,16 +49,12 @@
         <updatePolicy>daily</updatePolicy>
         <checksumPolicy>ignore</checksumPolicy>
       </releases>
-      <id>wso2-nexus</id>
-      <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
+      <id>nexus-releases</id>
+      <url>http://localhost:8081/nexus/content/repositories/releases/</url>
     </pluginRepository>
     <pluginRepository>
       <id>wso2-maven2-repository-1</id>
       <url>http://dist.wso2.org/maven2</url>
-    </pluginRepository>
-    <pluginRepository>
-      <id>wso2-nexus-repository-1</id>
-      <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
     </pluginRepository>
   </pluginRepositories>
   <build>
