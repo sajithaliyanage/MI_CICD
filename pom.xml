@@ -8,6 +8,18 @@
   <packaging>pom</packaging>
   <name>hello</name>
   <description>hello</description>
+  <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>WSO2 Release Distribution Repository</name>
+            <url>http://localhost:8081/nexus/</url>
+        </repository>
+        <snapshotRepository>
+            <id>wso2.snapshots</id>
+            <name>Apache Snapshot Repository</name>
+            <url>http://localhost:8081/nexus</url>
+        </snapshotRepository>
+    </distributionManagement>
   <scm>
         <url>https://github.com/sajithaliyanage/MI_CICD.git</url>
         <developerConnection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</developerConnection>
