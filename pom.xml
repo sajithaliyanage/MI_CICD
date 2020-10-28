@@ -8,6 +8,12 @@
   <packaging>pom</packaging>
   <name>hello</name>
   <description>hello</description>
+  <scm>
+        <url>https://github.com/sajithaliyanage/MI_CICD.git</url>
+        <developerConnection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</developerConnection>
+        <connection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</connection>
+        <tag>HEAD</tag>
+    </scm>
   <modules>
     <module>helloConfigs</module>
     <module>helloCompositeExporter</module>
