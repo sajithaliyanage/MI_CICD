@@ -14,11 +14,11 @@
             <name>WSO2 Release Distribution Repository</name>
             <url>http://localhost:8081/nexus/content/repositories/releases/</url>
         </repository>
-        <snapshotRepository>
+        <!-- <snapshotRepository>
             <id>wso2.snapshots</id>
             <name>Apache Snapshot Repository</name>
             <url>http://localhost:8081/nexus/content/repositories/releases/</url>
-        </snapshotRepository>
+        </snapshotRepository> -->
     </distributionManagement>
   <scm>
         <url>https://github.com/sajithaliyanage/MI_CICD.git</url>
