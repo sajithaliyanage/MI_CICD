@@ -18,12 +18,12 @@
   </properties>
   
   <dependencies>
-    <!-- <dependency>
+    <dependency>
       <groupId>wso2.sampleHelloWorld.api</groupId>
       <artifactId>HelloWorld</artifactId>
       <version>${project.version}</version>
       <type>xml</type>
-    </dependency> -->
+    </dependency>
   </dependencies>
   <repositories>
     <repository>
