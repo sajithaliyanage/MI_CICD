@@ -3,7 +3,7 @@
   <parent>
 		<groupId>wso2.sampleHelloWorld</groupId>
     <artifactId>hello</artifactId>
-    <version>1.0.244</version>
+    <version>1.0.245-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
@@ -152,8 +152,4 @@
       </plugin>
     </plugins>
   </build>
-
-  <scm>
-    <tag>hello-1.0.244</tag>
-  </scm>
 </project>
