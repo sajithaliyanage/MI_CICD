@@ -7,29 +7,12 @@
   <packaging>pom</packaging>
   <name>hello</name>
   <description>hello</description>
-  <repositories>
-        <repository>
-            <id>nexus-releases</id>
-            <name>WSO2 internal Repository</name>
-            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
-        </repository>
-    </repositories>
   <distributionManagement>
         <repository>
             <id>releases</id>
             <name>WSO2 Release Distribution Repository</name>
-            <url>http://localhost:8081/nexus/service/local/staging/deploy/maven2</url>
+            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
         </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Apache Snapshot Repository</name>
-            <url>http://localhost:8081/nexus/content/repositories/thirdparty/</url>
-        </snapshotRepository>
     </distributionManagement>
     <scm>
         <url>https://github.com/sajithaliyanage/MI_CICD.git</url>
