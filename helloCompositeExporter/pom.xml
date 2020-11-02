@@ -20,7 +20,7 @@
     <dependency>
       <groupId>wso2.sampleHelloWorld.api</groupId>
       <artifactId>HelloWorld</artifactId>
-      <version>2.0.0</version>
+      <version>1.0.0</version>
       <type>xml</type>
     </dependency>
   </dependencies>
