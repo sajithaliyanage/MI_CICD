@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>wso2.sampleHelloWorld</groupId>
   <artifactId>hello</artifactId>
-  <version>1.0.270-SNAPSHOT</version>
+  <version>1.0.270</version>
   <packaging>pom</packaging>
   <name>hello</name>
   <description>hello</description>
@@ -16,6 +15,7 @@
     <connection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</connection>
     <developerConnection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</developerConnection>
     <url>https://github.com/sajithaliyanage/MI_CICD.git</url>
+    <tag>hello-1.0.270</tag>
   </scm>
   <distributionManagement>
     <repository>
@@ -24,7 +24,7 @@
       <url>http://localhost:8081/nexus/content/repositories/releases/</url>
     </repository>
   </distributionManagement>
-  <build >
+  <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
