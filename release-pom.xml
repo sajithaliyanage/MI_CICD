@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>wso2.sampleHelloWorld</groupId>
+  <artifactId>hello</artifactId>
+  <version>1.0.279</version>
+  <packaging>pom</packaging>
+  <name>hello</name>
+  <description>hello</description>
+  <modules>
+    <module>helloConfigs</module>
+    <module>helloCompositeExporter</module>
+  </modules>
+  <scm>
+    <connection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</connection>
+    <developerConnection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</developerConnection>
+    <url>https://github.com/sajithaliyanage/MI_CICD.git</url>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <name>WSO2 Release Distribution Repository</name>
+      <url>http://localhost:8081/nexus/content/repositories/development/</url>
+    </repository>
+  </distributionManagement>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <scriptSourceDirectory>/Users/sajithaliyanage/.jenkins/workspace/mi-dev/src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <outputDirectory>target/classes</outputDirectory>
+    <testOutputDirectory>target/test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+      </testResource>
+    </testResources>
+    <directory>target</directory>
+    <finalName>hello-1.0.279</finalName>
+  </build>
+  <reporting>
+    <outputDirectory>target/site</outputDirectory>
+  </reporting>
+</project>

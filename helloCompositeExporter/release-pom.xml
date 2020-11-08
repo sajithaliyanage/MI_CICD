@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <parent>
-		<groupId>wso2.sampleHelloWorld</groupId>
-    <artifactId>hello</artifactId>
-    <version>1.0.279</version>
-		<relativePath>../pom.xml</relativePath>
-  </parent>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+  <groupId>wso2.sampleHelloWorld</groupId>
   <artifactId>helloCompositeExporter</artifactId>
+  <version>1.0.279</version>
   <packaging>carbon/application</packaging>
   <name>helloCompositeExporter</name>
   <description>helloCompositeExporter</description>
+  <scm>
+    <connection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git/helloCompositeExporter</connection>
+    <developerConnection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git/helloCompositeExporter</developerConnection>
+    <url>https://github.com/sajithaliyanage/MI_CICD.git/helloCompositeExporter</url>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <name>WSO2 Release Distribution Repository</name>
+      <url>http://localhost:8081/nexus/content/repositories/development/</url>
+    </repository>
+  </distributionManagement>
   <properties>
     <wso2.sampleHelloWorld.api_._HelloWorld>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.api_._HelloWorld>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
   </properties>
-  
   <dependencies>
     <dependency>
       <groupId>wso2.sampleHelloWorld.api</groupId>
       <artifactId>HelloWorld</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
   <repositories>
@@ -42,6 +51,14 @@
       <id>wso2-nexus-repository-1</id>
       <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
     </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
   </repositories>
   <pluginRepositories>
     <pluginRepository>
@@ -61,12 +78,41 @@
       <id>wso2-nexus-repository-1</id>
       <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
     </pluginRepository>
+    <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
   </pluginRepositories>
   <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <scriptSourceDirectory>/Users/sajithaliyanage/.jenkins/workspace/mi-dev/helloCompositeExporter/src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <outputDirectory>target/classes</outputDirectory>
+    <testOutputDirectory>target/test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+      </testResource>
+    </testResources>
+    <directory>target</directory>
+    <finalName>helloCompositeExporter-1.0.279</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-eclipse-plugin</artifactId>
         <version>2.9</version>
+        <extensions>false</extensions>
         <configuration>
           <buildcommands />
           <projectnatures>
@@ -111,4 +157,7 @@
       </plugin>
     </plugins>
   </build>
+  <reporting>
+    <outputDirectory>target/site</outputDirectory>
+  </reporting>
 </project>
