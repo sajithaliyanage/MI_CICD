@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>wso2.sampleHelloWorld</groupId>
   <artifactId>hello</artifactId>
-  <version>1.0.289-SNAPSHOT</version>
+  <version>1.0.289</version>
   <packaging>pom</packaging>
   <name>hello</name>
   <description>hello</description>
@@ -15,7 +15,7 @@
     <connection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</connection>
     <developerConnection>scm:git:https://github.com/sajithaliyanage/MI_CICD.git</developerConnection>
     <url>https://github.com/sajithaliyanage/MI_CICD.git</url>
-    <tag>HEAD</tag>
+    <tag>hello-1.0.289</tag>
   </scm>
   <distributionManagement>
     <repository>
